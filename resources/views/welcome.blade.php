@@ -24,7 +24,7 @@
 
                     <div class="card-body">
                         <p class="card-date">
-                            03/09/2023
+                            {{date('d/m/Y', strtotime($event->date))}}
                         </p>
                         <h5 class="card-title">{{$event->title}}</h5>
                         <p class="card-participants">x participantes</p>
@@ -33,6 +33,11 @@
                 </div>
 
             @endforeach
+
+            @if (count($events) == 0)
+                <p>Não há eventos disponíveis.</p>
+            @endif
+
         </div>
        </div>
 
