@@ -23,8 +23,8 @@ Route::get('/contato', function () {
     return view('contact');
 });
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth'])->name('dashboard');
+Route::get('/dashboard', [EventController::class, 'dashboard'])->middleware('auth');
+
+
 
 require __DIR__.'/auth.php';
