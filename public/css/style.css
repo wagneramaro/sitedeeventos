@@ -193,6 +193,12 @@ header{
     margin-top:30px;
 }
 
+/* EVENT EDIT PAGE */
+
+.img-preview {
+    padding: 30px 0;
+}
+
 /*DASHBOARD*/
 
 .dashboard-title-container{
